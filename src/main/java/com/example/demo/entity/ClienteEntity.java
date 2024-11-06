@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "clientes")
 @NoArgsConstructor
@@ -24,5 +26,5 @@ public class ClienteEntity {
     private String telefono;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Pedido> pedidos;
+    private List<PedidoEntity> pedidos;
 }

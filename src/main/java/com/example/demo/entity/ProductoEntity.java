@@ -29,5 +29,5 @@ public class ProductoEntity {
 
     // Relación con Inventario (opcional si Inventario es una tabla separada)
     @OneToOne(mappedBy = "producto", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Inventario inventario;
+    private InventarioEntity inventario;
 }

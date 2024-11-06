@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "pedidos")
@@ -30,5 +31,5 @@ public class PedidoEntity {
     private ClienteEntity cliente;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<DetallePedido> detallesPedido;
+    private List<DetallePedidoEntity> detallesPedido;
 }
